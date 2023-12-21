@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build" # Adjust this to your build command if needed
+  publish = "public" # Adjust this to your Astro output directory
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:3001/:splat"
+  status = 200
+  force = true
